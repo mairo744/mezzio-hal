@@ -24,9 +24,7 @@ class ConfigProviderTest extends TestCase
         return $config;
     }
 
-    /**
-     * @depends testInvocationReturnsArray
-     */
+    #[\PHPUnit\Framework\Attributes\Depends('testInvocationReturnsArray')]
     public function testReturnedArrayContainsDependencies(array $config): void
     {
         self::assertArrayHasKey('dependencies', $config);
